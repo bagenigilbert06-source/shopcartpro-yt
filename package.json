@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+  "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typegen": "npx sanity@latest schema extract && npx sanity@latest typegen generate"
+    "typegen": "pnpm dlx sanity@latest schema extract && pnpm dlx sanity@latest typegen generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.34.1",
@@ -29,11 +29,11 @@
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-tooltip": "^1.2.8",
     "@radix-ui/react-visually-hidden": "^1.2.3",
-    "@sanity/client": "^7.11.2",
+    "@sanity/client": "^7.22.1",
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.2.0",
     "@sanity/preview-url-secret": "^2.1.15",
-    "@sanity/vision": "^4.12.0",
+    "@sanity/vision": "^3.89.0",
     "@types/lodash": "^4.17.20",
     "@types/nodemailer": "^7.0.3",
     "class-variance-authority": "^0.7.1",
@@ -50,17 +50,18 @@
     "lucide-react": "^0.552.0",
     "motion": "^12.23.19",
     "next": "^16.0.1",
-    "next-sanity": "^11.6.3",
-    "nodemailer": "^7.0.10",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "next-sanity": "^13.0.11",
+    "nodemailer": "^8.0.11",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "react-icons": "^5.5.0",
     "recharts": "^3.3.0",
-    "sanity": "^4.12.0",
+    "sanity": "^5.31.1",
     "sonner": "^2.0.7",
     "stripe": "^19.2.0",
     "styled-components": "^6.1.19",
     "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^3.4.19",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^13.0.0",
     "zustand": "^5.0.8"
@@ -72,10 +73,10 @@
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.2.2",
     "@types/uuid": "^11.0.0",
+    "baseline-browser-mapping": "^2.10.35",
     "eslint": "^9.39.0",
     "eslint-config-next": "^16.0.1",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.16",
     "typescript": "^5.7.3"
   }
 }

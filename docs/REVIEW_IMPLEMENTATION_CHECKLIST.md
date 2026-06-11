@@ -90,8 +90,8 @@
 
 ### Required:
 
-1. [ ] Run `npx sanity@latest schema extract`
-2. [ ] Run `npx sanity@latest typegen generate`
+1. [ ] Run `pnpm dlx sanity@latest schema extract`
+2. [ ] Run `pnpm dlx sanity@latest typegen generate`
 3. [ ] Verify Sanity types are updated
 4. [ ] Test review submission flow
 5. [ ] Test admin approval flow

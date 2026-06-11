@@ -198,8 +198,8 @@
 1. **Regenerate Sanity Types**:
 
    ```bash
-   npx sanity@latest schema extract
-   npx sanity@latest typegen generate
+   pnpm dlx sanity@latest schema extract
+   pnpm dlx sanity@latest typegen generate
    ```
 
 2. **Deploy Schema to Sanity**:

@@ -107,9 +107,9 @@ If you get a "Failed to send message" error:
 
    ```bash
    # Deploy your schema to Sanity Studio
-   npm run sanity:deploy
+   pnpm run sanity:deploy
    # or
-   npx sanity deploy
+   pnpm dlx sanity deploy
    ```
 
 3. **Test Connection:**

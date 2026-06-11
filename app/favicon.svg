@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!--
+    Mizizzi Favicon — favicon.svg
+    Brand colors: Orange #F47920 | Yellow #F5C518 | Cream #F5F0E8 | Black #1C1C1C
+    Usage: <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  -->
+  <defs>
+    <!-- Diagonal zebra stripes matching the Mizizzi logo letterform -->
+    <pattern id="zs" x="0" y="0" width="3.5" height="3.5"
+      patternUnits="userSpaceOnUse" patternTransform="rotate(-42)">
+      <rect width="3.5" height="3.5" fill="#F5F0E8"/>
+      <rect x="0" y="0" width="1.75" height="3.5" fill="#1C1C1C"/>
+    </pattern>
+    <!-- Clip to rounded-square canvas -->
+    <clipPath id="bg">
+      <rect x="0" y="0" width="32" height="32" rx="7" ry="7"/>
+    </clipPath>
+  </defs>
+
+  <!-- White canvas with rounded corners -->
+  <rect x="0" y="0" width="32" height="32" rx="7" ry="7" fill="#FFFFFF"/>
+
+  <!-- Orange triangle accent — top-right, matches logo geometry -->
+  <polygon points="22,0 32,0 32,10" fill="#F47920" clip-path="url(#bg)"/>
+
+  <!-- Yellow accent — bottom-left corner -->
+  <polygon points="0,24 5,32 0,32" fill="#F5C518" clip-path="url(#bg)"/>
+
+  <!-- M letterform with zebra stripe fill -->
+  <g clip-path="url(#bg)">
+    <path d="
+      M 3   3.5
+      L 8   3.5
+      L 16  15.5
+      L 24  3.5
+      L 29  3.5
+      L 29  22
+      L 24  22
+      L 24  12.5
+      L 16  23.5
+      L 8   12.5
+      L 8   22
+      L 3   22
+      Z"
+      fill="url(#zs)"/>
+    <!-- Crisp outline over the zebra fill -->
+    <path d="
+      M 3   3.5
+      L 8   3.5
+      L 16  15.5
+      L 24  3.5
+      L 29  3.5
+      L 29  22
+      L 24  22
+      L 24  12.5
+      L 16  23.5
+      L 8   12.5
+      L 8   22
+      L 3   22
+      Z"
+      fill="none" stroke="#1C1C1C" stroke-width="0.6"
+      stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+
+  <!-- Orange bottom wordmark bar -->
+  <rect x="0" y="24" width="32" height="8" fill="#F47920" clip-path="url(#bg)"/>
+  <!-- Fill seam between M legs and bar -->
+  <rect x="0" y="22" width="32" height="3" fill="#F47920" clip-path="url(#bg)"/>
+
+  <!-- White "M" in bar — legible at all sizes -->
+  <text
+    x="16" y="31"
+    font-family="Arial Black, Arial, Helvetica, sans-serif"
+    font-size="5.5"
+    font-weight="900"
+    fill="#FFFFFF"
+    text-anchor="middle"
+    letter-spacing="0.8">M</text>
+</svg>

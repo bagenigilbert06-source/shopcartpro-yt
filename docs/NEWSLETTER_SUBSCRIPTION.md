@@ -182,9 +182,9 @@ NEXT_PUBLIC_BASE_URL=https://your-domain.com
 1. The subscription schema is already added to `sanity/schemaTypes/index.ts`
 2. Deploy Sanity schema:
    ```bash
-   npm run sanity:deploy
+   pnpm run sanity:deploy
    # or
-   npx sanity deploy
+   pnpm dlx sanity deploy
    ```
 
 ## 📊 Viewing Subscriptions in Sanity

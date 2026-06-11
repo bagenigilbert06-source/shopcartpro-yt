@@ -1,5 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 const isProtectedRoute = createRouteMatcher([
   "/user(.*)",
@@ -34,7 +35,19 @@ const isUserAdmin = (userEmail: string | null | undefined): boolean => {
   }
 };
 
-export default clerkMiddleware(async (auth, req) => {
+// Check if Clerk is properly configured
+const clerkConfigured = Boolean(
+  process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY?.trim() &&
+    process.env.CLERK_SECRET_KEY?.trim()
+);
+
+// Create the middleware - either with Clerk or without
+const clerkMiddlewareHandler = clerkMiddleware(async (auth, req) => {
+  // Skip auth checks if Clerk is not configured
+  if (!clerkConfigured) {
+    return NextResponse.next();
+  }
+
   if (isProtectedRoute(req)) {
     await auth.protect();
   }
@@ -46,19 +59,14 @@ export default clerkMiddleware(async (auth, req) => {
     if (!userId) {
       return NextResponse.redirect(new URL("/sign-in", req.url));
     }
-
-    // Get user's email from Clerk
-    // Note: In middleware, we can't easily access the full user object
-    // The client-side check in the admin page component will handle the detailed verification
-    // This middleware primarily ensures authentication is required for admin routes
   }
 });
 
+export default clerkMiddlewareHandler;
+
 export const config = {
   matcher: [
-    // Skip Next.js internals and all static files, unless found in search params
     "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
-    // Always run for API routes
     "/(api|trpc)(.*)",
   ],
 };

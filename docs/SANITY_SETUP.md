@@ -8,7 +8,7 @@ After adding the contact form, you need to deploy the schema to Sanity Studio:
 
 ```bash
 cd /path/to/your/project
-npx sanity deploy
+pnpm dlx sanity deploy
 ```
 
 ### 2. Check Studio
@@ -47,7 +47,7 @@ You should see a new "Contact Messages" section in your Sanity Studio sidebar.
 
 ### Error: "Schema type 'contact' not found"
 
-- Run `npx sanity deploy` to deploy schema
+- Run `pnpm dlx sanity deploy` to deploy schema
 - Check that `contactType` is exported in `sanity/schemaTypes/index.ts`
 
 ### Test Connection

@@ -102,6 +102,49 @@ export const metadata: Metadata = {
 
 const RootLayout = async ({ children }: { children: ReactNode }) => {
   const GADSENSE_CLIENT_ID = "ca-pub-6542623777003381"; // Define it once
+  const clerkKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  
+  // If Clerk key is not configured, still provide a lightweight ClerkProvider
+  // to satisfy client hooks during local development (bypass publishable key).
+  if (!clerkKey || clerkKey.trim() === "") {
+    return (
+      <ClerkProvider __internal_bypassMissingPublishableKey={true}>
+        <html lang="en">
+          <Head>
+            <meta name="google-adsense-account" content={GADSENSE_CLIENT_ID} />
+          </Head>
+          <body
+            className={`${poppins.variable} ${raleway.variable} ${opensans.variable} antialiased`}
+          >
+            <UserDataProvider>{children}</UserDataProvider>
+            <PremiumFloatingButton />
+            <Toaster
+              position="bottom-right"
+              richColors
+              closeButton
+              toastOptions={{
+                style: {
+                  background: "#ffffff",
+                  color: "#1f2937",
+                  border: "1px solid #e5e7eb",
+                  borderRadius: "8px",
+                  fontSize: "14px",
+                },
+                className: "sonner-toast",
+              }}
+            />
+
+            <Script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GADSENSE_CLIENT_ID}`}
+              strategy="beforeInteractive"
+            />
+          </body>
+        </html>
+      </ClerkProvider>
+    );
+  }
+
   return (
     <ClerkProvider>
       <html lang="en">

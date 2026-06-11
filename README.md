@@ -48,7 +48,7 @@ A modern, feature-rich e-commerce application built with Next.js 16, TypeScript,
 Before you begin, ensure you have the following installed:
 
 - **Node.js** 18.0 or higher ([Download](https://nodejs.org/))
-- **npm**, **yarn**, or **pnpm** package manager
+- **pnpm** package manager (recommended)
 - **Git** ([Download](https://git-scm.com/))
 
 ---
@@ -64,16 +64,9 @@ cd shopcartpro
 
 ### 2️⃣ Install Dependencies
 
-Choose your preferred package manager:
+Install dependencies using pnpm:
 
 ```bash
-# Using npm
-npm install
-
-# Using yarn
-yarn install
-
-# Using pnpm (recommended)
 pnpm install
 ```
 
@@ -138,7 +131,7 @@ NEXT_PUBLIC_COMPANY_CITY=New York, NY 10001, USA
 2. Create a free account or sign in
 3. Create a new project:
    ```bash
-   npm create sanity@latest -- --env=.env --create-project "ShopCart Pro" --dataset production
+   pnpm create sanity@latest -- --env=.env --create-project "ShopCart Pro" --dataset production
    ```
 4. Get your credentials:
    - Go to [Sanity Management](https://www.sanity.io/manage)
@@ -252,13 +245,6 @@ NEXT_PUBLIC_COMPANY_CITY=New York, NY 10001, USA
 Start the development server with Turbopack (faster):
 
 ```bash
-# Using npm
-npm run dev
-
-# Using yarn
-yarn dev
-
-# Using pnpm
 pnpm dev
 ```
 
@@ -271,10 +257,10 @@ The application will be available at:
 
 ```bash
 # Build the application
-npm run build
+pnpm build
 
 # Start the production server
-npm start
+pnpm start
 ```
 
 ---
