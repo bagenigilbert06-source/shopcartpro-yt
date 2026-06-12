@@ -3,6 +3,7 @@ import { Product, Category } from "@/sanity.types";
 import { urlFor } from "@/sanity/lib/image";
 
 const BASE_URL = "https://shopcartpro.reactbd.org";
+const SITE_NAME = "mizizzi";
 
 /**
  * Generate metadata for product pages
@@ -11,7 +12,7 @@ export function generateProductMetadata(product: any): Metadata {
   const title = product.name || "Product";
   const description =
     product.description ||
-    `Buy ${title} online at ShopCart. ${
+    `Buy ${title} online at mizizzi. ${
       product.price ? `Price: $${product.price}` : ""
     }`;
   const imageUrl = product.images?.[0]
@@ -70,7 +71,7 @@ export function generateCategoryMetadata(
   const title = category.title || "Category";
   const description =
     category.description ||
-    `Browse ${productCount} products in ${title} category at ShopCart. Find the best deals and quality items.`;
+    `Browse ${productCount} products in ${title} category at mizizzi. Find the best deals and quality items.`;
   const imageUrl = category.image
     ? urlFor(category.image).url()
     : "/og-image.jpg";

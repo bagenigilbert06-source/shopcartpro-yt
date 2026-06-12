@@ -90,7 +90,7 @@ const AboutPage = () => {
               Est. 2025
             </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              About ShopCart
+              About mizizzi
             </h1>
             <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               We&apos;re revolutionizing online shopping with curated products,

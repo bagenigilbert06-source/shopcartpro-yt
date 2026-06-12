@@ -30,11 +30,8 @@ const Logo = ({ className, variant = "default" }: Props) => {
           {/* Text Logo (smaller) */}
           <div className="flex items-center">
             <h1 className="text-sm font-black tracking-wider uppercase font-sans">
-              <span className="text-shop_dark_green group-hover:text-shop_light_green hoverEffect">
-                Shop
-              </span>
-              <span className="bg-gradient-to-r from-shop_light_green to-shop_orange bg-clip-text text-transparent group-hover:from-shop_dark_green group-hover:to-shop_light_green hoverEffect">
-                cart
+              <span className="bg-gradient-to-r from-shop_dark_green via-shop_light_green to-shop_orange bg-clip-text text-transparent group-hover:from-shop_orange group-hover:via-shop_dark_green group-hover:to-shop_light_green hoverEffect">
+                mizizzi
               </span>
             </h1>
 
@@ -67,11 +64,8 @@ const Logo = ({ className, variant = "default" }: Props) => {
         {/* Text Logo */}
         <div className="flex items-center">
           <h1 className="text-2xl font-black tracking-wider uppercase font-sans">
-            <span className="text-shop_dark_green group-hover:text-shop_light_green hoverEffect">
-              Shop
-            </span>
-            <span className="bg-gradient-to-r from-shop_light_green to-shop_orange bg-clip-text text-transparent group-hover:from-shop_dark_green group-hover:to-shop_light_green hoverEffect">
-              cart
+            <span className="bg-gradient-to-r from-shop_dark_green via-shop_light_green to-shop_orange bg-clip-text text-transparent group-hover:from-shop_orange group-hover:via-shop_dark_green group-hover:to-shop_light_green hoverEffect">
+              mizizzi
             </span>
           </h1>
 

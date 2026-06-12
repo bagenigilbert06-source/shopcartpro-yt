@@ -214,7 +214,7 @@ export const sendOrderStatusNotification = async (
       type: "order",
       priority,
       actionUrl,
-      sentBy: "ShopCart System",
+      sentBy: "mizizzi System",
     });
 
     return result;

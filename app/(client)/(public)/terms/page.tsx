@@ -41,8 +41,8 @@ const TermsPage = () => {
       title: "Acceptance of Terms",
       icon: CheckCircle2,
       content: [
-        "By accessing and using ShopCart&apos;s website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.",
-        "These terms constitute a legally binding agreement between you and ShopCart. If you do not agree with any part of these terms, you must not use our services.",
+        "By accessing and using mizizzi&apos;s website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.",
+        "These terms constitute a legally binding agreement between you and mizizzi. If you do not agree with any part of these terms, you must not use our services.",
         "We may update these terms from time to time. Continued use of our services after changes indicates your acceptance of the modified terms.",
         "These terms apply to all users, including browsers, vendors, customers, merchants, and contributors of content.",
       ],
@@ -142,7 +142,7 @@ const TermsPage = () => {
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Please read these terms carefully before using our services. They
-              outline your rights and responsibilities as a ShopCart user.
+              outline your rights and responsibilities as a mizizzi user.
             </p>
             <Badge className="mt-6 bg-white/20 text-white border-white/30">
               Last updated: January 2024

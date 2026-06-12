@@ -6,7 +6,6 @@ import { Toaster } from "sonner";
 import Script from "next/script";
 import Head from "next/head";
 import { UserDataProvider } from "@/contexts/UserDataContext";
-import PremiumFloatingButton from "@/components/PremiumFloatingButton";
 import "./globals.css";
 
 const poppins = localFont({
@@ -30,11 +29,11 @@ const opensans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://shopcartpro.reactbd.org"),
   title: {
-    template: "%s | ShopCart - Premium Online Shopping",
-    default: "ShopCart - Your Trusted Online Shopping Destination",
+    template: "%s | mizizzi - Premium Online Shopping",
+    default: "mizizzi - Your Trusted Online Shopping Destination",
   },
   description:
-    "Discover amazing products at ShopCart, your trusted online shopping destination for quality items and exceptional customer service. Shop electronics, fashion, home goods and more with fast delivery.",
+    "Discover amazing products at mizizzi, your trusted online shopping destination for quality items and exceptional customer service. Shop electronics, fashion, home goods and more with fast delivery.",
   keywords: [
     "online shopping",
     "e-commerce",
@@ -45,11 +44,11 @@ export const metadata: Metadata = {
     "home goods",
     "deals",
     "discounts",
-    "ShopCart",
+    "mizizzi",
   ],
-  authors: [{ name: "ShopCart" }],
-  creator: "ShopCart",
-  publisher: "ShopCart",
+  authors: [{ name: "mizizzi" }],
+  creator: "mizizzi",
+  publisher: "mizizzi",
   formatDetection: {
     email: false,
     address: false,
@@ -59,26 +58,26 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://shopcartpro.reactbd.org",
-    siteName: "ShopCart",
-    title: "ShopCart - Your Trusted Online Shopping Destination",
+    siteName: "mizizzi",
+    title: "mizizzi - Your Trusted Online Shopping Destination",
     description:
-      "Discover amazing products at ShopCart, your trusted online shopping destination for quality items and exceptional customer service.",
+      "Discover amazing products at mizizzi, your trusted online shopping destination for quality items and exceptional customer service.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ShopCart Online Store",
+        alt: "mizizzi Online Store",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ShopCart - Your Trusted Online Shopping Destination",
+    title: "mizizzi - Your Trusted Online Shopping Destination",
     description:
-      "Discover amazing products at ShopCart, your trusted online shopping destination for quality items and exceptional customer service.",
+      "Discover amazing products at mizizzi, your trusted online shopping destination for quality items and exceptional customer service.",
     images: ["/og-image.jpg"],
-    creator: "@shopcart",
+    creator: "@mizizzi",
   },
   robots: {
     index: true,
@@ -117,7 +116,6 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
             className={`${poppins.variable} ${raleway.variable} ${opensans.variable} antialiased`}
           >
             <UserDataProvider>{children}</UserDataProvider>
-            <PremiumFloatingButton />
             <Toaster
               position="bottom-right"
               richColors
@@ -153,9 +151,9 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
         </Head>
         <body
           className={`${poppins.variable} ${raleway.variable} ${opensans.variable} antialiased`}
+          suppressHydrationWarning
         >
           <UserDataProvider>{children}</UserDataProvider>
-          <PremiumFloatingButton />
           <Toaster
             position="bottom-right"
             richColors
